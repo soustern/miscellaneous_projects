@@ -1,0 +1,26 @@
+// Program that gets a value, discount amount and calculates the final price
+#include <stdio.h>
+
+// Function that calculates price after discount
+float discount(float price, int discount); 
+
+int main(void) 
+{
+    float regular, sale;
+    int percent_off;
+    
+    printf("Regular price: ");
+    scanf("%f", &regular);
+    
+    printf("Percentage off: ");
+    scanf("%i", &percent_off);
+    
+    sale = discount(regular, percent_off);
+    printf("%.2f", sale);
+}
+
+float discount(float price, int discount) 
+{
+    return price - (price * discount/100);
+    //printf("\n%.2f", price);
+}
